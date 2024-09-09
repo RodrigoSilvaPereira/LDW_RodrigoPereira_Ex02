@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - Loja de Suplementos{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo à Loja de Suplementos!</h2>
+<p>Na nossa loja, você encontra uma variedade de suplementos para ajudar no seu desempenho nos treinos. Oferecemos
+    produtos de alta qualidade, selecionados cuidadosamente para garantir os melhores resultados.</p>
+<p>Navegue pelo nosso site para conhecer mais sobre os nossos produtos e como eles podem ajudar a alcançar seus
+    objetivos.</p>
+<p>Aqui você encontra suplementos como:</p>
+<ul>
+    <li>Proteínas</li>
+    <li>Aminoácidos</li>
+    <li>Pré-Treinos</li>
+    <li>Vitaminas e Minerais</li>
+    <li>Termogênicos</li>
+</ul>
+<p><a href="{{ url_for('supplements') }}">Confira todos os nossos suplementos</a></p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block titulo %}Adicionar Suplemento - Loja de Suplementos{% endblock %}
+
+{% block content %}
+<h2>Adicionar Novo Suplemento</h2>
+<p>Preencha o formulário abaixo para cadastrar um novo suplemento em nosso banco de dados.</p>
+<hr>
+<form action="/add_supplement" method="post">
+    <label for="titulo">Título:</label><br>
+    <input type="text" id="titulo" name="titulo" required><br><br>
+
+    <label for="ano">Ano:</label><br>
+    <input type="number" id="ano" name="ano" required><br><br>
+
+    <label for="categoria">Categoria:</label><br>
+    <input type="text" id="categoria" name="categoria" required><br><br>
+
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" required></textarea><br><br>
+
+    <input type="submit" value="Adicionar Suplemento">
+</form>
+{% endblock %}

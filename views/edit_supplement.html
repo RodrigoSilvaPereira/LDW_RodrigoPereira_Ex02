@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Editar Suplemento - Loja de Suplementos{% endblock %}
+
+{% block content %}
+<h2>Editar Suplemento</h2>
+<p>Atualize as informações do suplemento abaixo.</p>
+<hr>
+<form action="{{ url_for('edit_supplement', id=suplemento.id) }}" method="post">
+    <label for="titulo">Título:</label><br>
+    <input type="text" id="titulo" name="titulo" value="{{ suplemento.titulo }}" required><br><br>
+
+    <label for="ano">Ano:</label><br>
+    <input type="number" id="ano" name="ano" value="{{ suplemento.ano }}" required><br><br>
+
+    <label for="categoria">Categoria:</label><br>
+    <input type="text" id="categoria" name="categoria" value="{{ suplemento.categoria }}" required><br><br>
+
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" required>{{ suplemento.descricao }}</textarea><br><br>
+
+    <input type="submit" value="Salvar Alterações">
+</form>
+{% endblock %}

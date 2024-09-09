@@ -1,0 +1,455 @@
+/* Estilo global */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 100vh;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {/* Estilo global */
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+        height: 100vh;
+    }
+    
+    h2 {
+        color: #2980b9;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #7f8c8d;
+    }
+    
+    /* Navbar */
+    nav {
+        background-color: #2c3e50;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 14px 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    nav ul li a:hover {
+        background-color: #2980b9;
+        color: #ecf0f1;
+    }
+    
+    /* Container principal */
+    main {
+        padding: 40px 20px;
+        max-width: 80vw;
+        max-height: 60vh;
+        margin: 25px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        overflow-y: scroll;
+    }
+    
+    /* Formulário */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form label {
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #34495e;
+    }
+    
+    form input[type="text"],
+    form input[type="number"],
+    form textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    form input[type="text"]:focus,
+    form input[type="number"]:focus,
+    form textarea:focus {
+        border-color: #2980b9;
+        box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+    }
+    
+    form input[type="submit"] {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #1abc9c;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    form input[type="submit"]:hover {
+        background-color: #16a085;
+    }
+    
+    /* Listas */
+    ul, ol {
+        padding-left: 20px;
+    }
+    
+    details summary {
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        color: #34495e;
+    }
+    
+    details p {
+        margin-top: 8px;
+    }
+    
+    /* Rodapé */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 40px;
+        height: 2rem;
+        padding-bottom: 1rem;
+        font-size: 14px;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 600px) {
+        main {
+            padding: 20px;
+        }
+    
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        nav ul li {
+            margin-bottom: 10px;
+        }
+    }
+    
+    /* Estilo para a tabela */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #2980b9;
+        color: white;
+        font-weight: bold;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    /* Ajuste dos botões */
+    .btn-edit, .btn-delete {
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-edit {
+        background-color: #3498db;
+    }
+    
+    .btn-edit:hover {
+        background-color: #2980b9;
+    }
+    
+    .btn-delete {
+        background-color: #e74c3c;
+    }
+    
+    .btn-delete:hover {
+        background-color: #c0392b;
+    }
+    
+    /* Ajuste dos links de paginação */
+    div a {
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: #1abc9c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    div a:hover {
+        background-color: #16a085;
+    }
+    
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: #34495e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50;
+}
+
+/* Container principal */
+main {
+    padding: 40px 20px;
+    max-width: 80vw;
+    max-height: 60vh;
+    margin: 25px auto 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    border-color: #1abc9c;
+}
+
+form input[type="submit"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 20px;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+details p {
+    margin-top: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    height: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botões Editar e Excluir */
+.btn-edit, .btn-delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background-color: #3498db;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Efeito de clique */
+.btn-edit:active, .btn-delete:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
