@@ -453,3 +453,32 @@ tr:hover {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilo para a paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-pagination {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-pagination:hover {
+    background-color: #16a085;
+    color: white;
+}
+
+.btn-pagination:active {
+    background-color: #148f77;
+}

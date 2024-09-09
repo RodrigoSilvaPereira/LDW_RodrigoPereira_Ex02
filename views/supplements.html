@@ -35,12 +35,12 @@
     </tbody>
 </table>
 
-<div>
+<div class="pagination">
     {% if supplements.has_prev %}
-        <a href="{{ url_for('supplements', page=supplements.prev_num) }}">« Anterior</a>
+        <a href="{{ url_for('supplements', page=supplements.prev_num) }}" class="btn-pagination">« Anterior</a>
     {% endif %}
     {% if supplements.has_next %}
-        <a href="{{ url_for('supplements', page=supplements.next_num) }}">Próximo »</a>
+        <a href="{{ url_for('supplements', page=supplements.next_num) }}" class="btn-pagination">Próximo »</a>
     {% endif %}
 </div>
 
